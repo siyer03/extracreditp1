@@ -1,0 +1,47 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Extra Credit Part 1</title>
+    <style type="text/css">
+        body {text-align: center;}
+    </style>
+</head>
+
+<body>
+
+<form>
+
+<input type = "text" value = "abc" id = "left">
+&nbsp; &nbsp;
+<input type = "button" value = "Jump >" id = btn>
+&nbsp; &nbsp;
+<input type = "text" value = "" id = "right">
+
+</form>
+
+<script>
+
+lbox = document.getElementById("left");
+button = document.getElementById("btn");
+rbox = document.getElementById("right");
+
+button.onclick = function ()
+{
+    if (rbox.value == "")
+    {
+        rbox.value = lbox.value;
+        lbox.value = "";
+        button.value = "< Jump";
+    } else if (lbox.value == "")
+    {
+        lbox.value = rbox.value;
+        rbox.value = "";
+        button.value = "Jump >";
+    }
+}
+
+</script>
+
+</body>
+
+</html>
